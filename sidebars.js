@@ -27,6 +27,14 @@ const sidebars = {
     { type: 'doc', id: 'Normativa/ley-1122-2007', label: '📋 Ley 1122 de 2007' },
     { type: 'doc', id: 'Normativa/decreto-489-2024', label: '📜 Decreto 489 de 2024' },
   ],
+  apisSidebar: [
+    { type: 'doc', id: 'apis/apis-index', label: '🔌 Catálogo de APIs' },
+    { type: 'doc', id: 'apis/api-alistamiento', label: '⚙️ API Alistamiento' },
+    { type: 'doc', id: 'apis/api-validacion', label: '✅ API Validación' },
+    { type: 'doc', id: 'apis/api-postulacion', label: '📬 API Postulación' },
+    { type: 'doc', id: 'apis/api-liquidacion', label: '💰 API Liquidación' },
+    { type: 'doc', id: 'apis/api-pagos', label: '🏦 API Pagos / ERP' },
+  ],
   arquitecturaSidebar: [
     { type: 'doc', id: 'arquitectura/resumen', label: '📄 Resumen Ejecutivo' },
     { type: 'doc', id: 'arquitectura/flujo', label: '🔄 Flujo del Proceso' },

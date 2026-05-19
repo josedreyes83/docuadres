@@ -48,6 +48,12 @@ const config = {
           },
           {
             type: 'docSidebar',
+            sidebarId: 'apisSidebar',
+            position: 'left',
+            label: 'APIs',
+          },
+          {
+            type: 'docSidebar',
             sidebarId: 'arquitecturaSidebar',
             position: 'left',
             label: 'Arquitectura',
@@ -78,6 +84,17 @@ const config = {
               { label: 'Liquidación', to: '/docs/modulos/liquidacion' },
               { label: 'REPS', to: '/docs/modulos/reps' },
               { label: 'AUTH', to: '/docs/modulos/auth' },
+            ],
+          },
+          {
+            title: 'APIs',
+            items: [
+              { label: 'Catálogo de APIs', to: '/docs/apis' },
+              { label: 'API Alistamiento', to: '/docs/apis/api-alistamiento' },
+              { label: 'API Validación', to: '/docs/apis/api-validacion' },
+              { label: 'API Postulación', to: '/docs/apis/api-postulacion' },
+              { label: 'API Liquidación', to: '/docs/apis/api-liquidacion' },
+              { label: 'API Pagos / ERP', to: '/docs/apis/api-pagos' },
             ],
           },
           {
