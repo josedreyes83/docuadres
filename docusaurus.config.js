@@ -64,6 +64,12 @@ const config = {
             position: 'left',
             label: 'Normativa',
           },
+          {
+            type: 'docSidebar',
+            sidebarId: 'guiasSidebar',
+            position: 'left',
+            label: 'Guías Dev',
+          },
           { to: '/docs/glosario', label: 'Glosario', position: 'left' },
           {
             href: 'https://www.adres.gov.co',
@@ -112,6 +118,12 @@ const config = {
               { label: 'Marco Normativo', to: '/docs/Normativa' },
               { label: 'Ley 1122 de 2007', to: '/docs/Normativa/ley-1122-2007' },
               { label: 'Decreto 489 de 2024', to: '/docs/Normativa/decreto-489-2024' },
+            ],
+          },
+          {
+            title: 'Guías de Desarrollo',
+            items: [
+              { label: 'Nuevo CRUD paso a paso', to: '/docs/guias/nuevo-crud' },
             ],
           },
           {

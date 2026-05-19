@@ -35,6 +35,9 @@ const sidebars = {
     { type: 'doc', id: 'apis/api-liquidacion', label: '💰 API Liquidación' },
     { type: 'doc', id: 'apis/api-pagos', label: '🏦 API Pagos / ERP' },
   ],
+  guiasSidebar: [
+    { type: 'doc', id: 'guias/nuevo-crud', label: '🔧 Nuevo CRUD paso a paso' },
+  ],
   arquitecturaSidebar: [
     { type: 'doc', id: 'arquitectura/resumen', label: '📄 Resumen Ejecutivo' },
     { type: 'doc', id: 'arquitectura/flujo', label: '🔄 Flujo del Proceso' },
