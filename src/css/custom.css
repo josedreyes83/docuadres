@@ -1,172 +1,262 @@
-/* Colores institucionales ADRES — GiroDirecto */
+/* ============================================================
+   ADRES — GiroDirecto | Sistema de Diseño Institucional
+   Paleta oficial: https://www.adres.gov.co
+   ============================================================ */
+
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;600;700;900&display=swap');
+
 :root {
-  --ifm-color-primary: #00843D;
-  --ifm-color-primary-dark: #007236;
-  --ifm-color-primary-darker: #006B32;
-  --ifm-color-primary-darkest: #005829;
-  --ifm-color-primary-light: #009647;
-  --ifm-color-primary-lighter: #009D4B;
-  --ifm-color-primary-lightest: #00B055;
-  --ifm-code-font-size: 95%;
-  --ifm-navbar-background-color: #003366;
-  --ifm-navbar-link-color: #ffffff;
+  /* Paleta oficial ADRES */
+  --adres-navy:        #003366;
+  --adres-navy-dark:   #00244d;
+  --adres-navy-light:  #e8eef5;
+  --adres-blue:        #0066CC;
+  --adres-blue-hover:  #0052a3;
+  --adres-green:       #00843D;
+  --adres-green-dark:  #006B32;
+  --adres-green-light: #e8f5ee;
+  --adres-yellow:      #F5A800;
+  --adres-gray:        #F5F5F5;
+  --adres-border:      #dee2e6;
+  --adres-text:        #333333;
+  --adres-text-muted:  #666666;
+
+  /* Docusaurus tokens → colores ADRES */
+  --ifm-color-primary:          #0066CC;
+  --ifm-color-primary-dark:     #0052a3;
+  --ifm-color-primary-darker:   #004d99;
+  --ifm-color-primary-darkest:  #003d7a;
+  --ifm-color-primary-light:    #1a75d1;
+  --ifm-color-primary-lighter:  #3385d6;
+  --ifm-color-primary-lightest: #66a3e0;
+  --ifm-font-family-base:       'Source Sans 3', 'Segoe UI', Arial, sans-serif;
+  --ifm-code-font-size:         95%;
+  --ifm-navbar-background-color: var(--adres-navy);
+  --ifm-navbar-link-color:       #ffffff;
   --ifm-navbar-link-hover-color: #a8d5b5;
-  --ifm-navbar-shadow: 0 2px 8px rgba(0,0,0,0.3);
-  --adres-green: #00843D;
-  --adres-blue: #003366;
-  --adres-light-green: #e8f5ee;
-  --adres-light-blue: #e8eef5;
+  --ifm-navbar-shadow:           0 2px 8px rgba(0,0,0,0.25);
+  --ifm-heading-color:           var(--adres-navy);
+  --ifm-link-color:              var(--adres-blue);
+  --ifm-link-hover-color:        var(--adres-blue-hover);
 }
 
 [data-theme='dark'] {
-  --ifm-color-primary: #4CAF50;
-  --ifm-color-primary-dark: #43A047;
-  --ifm-color-primary-darker: #388E3C;
-  --ifm-color-primary-darkest: #2E7D32;
-  --ifm-color-primary-light: #66BB6A;
-  --ifm-color-primary-lighter: #81C784;
-  --ifm-color-primary-lightest: #A5D6A7;
+  --ifm-color-primary:         #3385d6;
+  --ifm-color-primary-dark:    #1a75d1;
+  --ifm-color-primary-darker:  #0066CC;
+  --ifm-color-primary-darkest: #0052a3;
+  --ifm-color-primary-light:   #4d94db;
+  --ifm-color-primary-lighter: #66a3e0;
+  --ifm-color-primary-lightest:#99c2ed;
 }
 
-/* Navbar institucional */
+/* ── Franja gov.co institucional ─────────────────────────── */
+.govco-strip {
+  background: var(--adres-navy-dark);
+  color: rgba(255,255,255,0.85);
+  font-size: 0.78rem;
+  padding: 5px 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 8px;
+  font-family: var(--ifm-font-family-base);
+}
+.govco-strip__left {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.govco-strip__flag {
+  display: flex;
+  height: 14px;
+  border-radius: 2px;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+.govco-strip__flag span {
+  display: block;
+  width: 10px;
+}
+.govco-strip__right {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  font-size: 0.75rem;
+}
+.govco-strip__right a {
+  color: rgba(255,255,255,0.75);
+  text-decoration: none;
+}
+.govco-strip__right a:hover { color: #fff; }
+
+/* ── Navbar ──────────────────────────────────────────────── */
 .navbar {
-  background-color: var(--adres-blue) !important;
-  border-bottom: 3px solid var(--adres-green);
+  background-color: var(--adres-navy) !important;
+  border-bottom: 4px solid var(--adres-green);
+  padding: 0.4rem 1.5rem;
 }
-
+.navbar__brand { gap: 10px; }
+.navbar__logo  { height: 38px !important; width: auto !important; }
 .navbar__title {
   color: #ffffff;
   font-weight: 700;
-  font-size: 1.2rem;
+  font-size: 1.05rem;
+  letter-spacing: 0.2px;
 }
-
-.navbar__link {
-  color: #ffffff !important;
-  font-weight: 500;
-}
-
+.navbar__link              { color: #ffffff !important; font-weight: 500; }
 .navbar__link:hover,
-.navbar__link--active {
-  color: #a8d5b5 !important;
+.navbar__link--active      { color: #a8d5b5 !important; }
+
+/* Dropdown menu */
+.dropdown__menu {
+  border-top: 3px solid var(--adres-green);
+  border-radius: 0 0 6px 6px;
 }
 
-/* Hero section */
+/* ── Hero ────────────────────────────────────────────────── */
 .hero-adres {
-  background: linear-gradient(135deg, var(--adres-blue) 0%, #004080 50%, var(--adres-green) 100%);
-  padding: 4rem 2rem;
+  background: linear-gradient(160deg, var(--adres-navy) 0%, #004080 55%, #005a1e 100%);
+  padding: 4rem 2rem 3.5rem;
   text-align: center;
   color: white;
+  position: relative;
+  overflow: hidden;
 }
-
+.hero-adres::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.03'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+}
+.hero-adres__tag {
+  display: inline-block;
+  background: var(--adres-green);
+  color: white;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  padding: 4px 14px;
+  border-radius: 20px;
+  margin-bottom: 16px;
+}
+.hero-adres__logos {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  margin-bottom: 24px;
+  flex-wrap: wrap;
+}
+.hero-adres__logos img {
+  height: 52px;
+  width: auto;
+  filter: brightness(0) invert(1);
+  opacity: 0.95;
+}
+.hero-adres__logos .sep {
+  width: 1px; height: 40px;
+  background: rgba(255,255,255,0.35);
+}
 .hero-adres__title {
-  font-size: 2.8rem;
-  font-weight: 800;
-  margin-bottom: 0.5rem;
-  text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+  font-size: 2.6rem;
+  font-weight: 900;
+  margin-bottom: 0.75rem;
+  line-height: 1.15;
+  text-shadow: 0 2px 6px rgba(0,0,0,0.25);
 }
-
 .hero-adres__subtitle {
-  font-size: 1.2rem;
-  opacity: 0.9;
-  max-width: 700px;
-  margin: 0 auto 2rem auto;
+  font-size: 1.15rem;
+  opacity: 0.92;
+  max-width: 680px;
+  margin: 0 auto 1.75rem;
+  line-height: 1.6;
 }
-
 .hero-adres__badge {
   display: inline-block;
-  background: rgba(255,255,255,0.15);
-  border: 1px solid rgba(255,255,255,0.3);
-  padding: 0.3rem 0.8rem;
+  background: rgba(255,255,255,0.12);
+  border: 1px solid rgba(255,255,255,0.28);
+  backdrop-filter: blur(4px);
+  padding: 0.3rem 0.9rem;
   border-radius: 20px;
-  font-size: 0.85rem;
-  margin: 0.25rem;
+  font-size: 0.82rem;
+  margin: 0.2rem;
+  color: #fff;
+  text-decoration: none;
+  transition: background 0.2s;
 }
-
+.hero-adres__badge:hover { background: rgba(255,255,255,0.22); color: #fff; text-decoration: none; }
 .hero-adres__cta {
-  margin-top: 2rem;
+  margin-top: 1.75rem;
   display: flex;
-  gap: 1rem;
+  gap: 0.9rem;
   justify-content: center;
   flex-wrap: wrap;
 }
-
 .btn-primary-adres {
-  background-color: var(--adres-green);
+  background: var(--adres-green);
   color: white;
-  padding: 0.75rem 2rem;
-  border-radius: 6px;
-  font-weight: 600;
+  padding: 0.7rem 1.8rem;
+  border-radius: 5px;
+  font-weight: 700;
+  font-size: 0.95rem;
   text-decoration: none;
   border: 2px solid var(--adres-green);
   transition: all 0.2s;
 }
-
-.btn-primary-adres:hover {
-  background-color: #006B32;
-  color: white;
-  text-decoration: none;
-}
-
+.btn-primary-adres:hover { background: var(--adres-green-dark); border-color: var(--adres-green-dark); color: #fff; text-decoration: none; }
 .btn-outline-adres {
-  background-color: transparent;
+  background: transparent;
   color: white;
-  padding: 0.75rem 2rem;
-  border-radius: 6px;
-  font-weight: 600;
+  padding: 0.7rem 1.8rem;
+  border-radius: 5px;
+  font-weight: 700;
+  font-size: 0.95rem;
   text-decoration: none;
-  border: 2px solid rgba(255,255,255,0.6);
+  border: 2px solid rgba(255,255,255,0.55);
   transition: all 0.2s;
 }
+.btn-outline-adres:hover { background: rgba(255,255,255,0.1); color: #fff; text-decoration: none; }
 
-.btn-outline-adres:hover {
-  background-color: rgba(255,255,255,0.1);
-  color: white;
-  text-decoration: none;
-}
-
-/* Stats bar */
+/* ── Stats bar ───────────────────────────────────────────── */
 .stats-bar {
-  background: #f8f9fa;
-  border-bottom: 1px solid #dee2e6;
-  padding: 1rem 2rem;
+  background: #fff;
+  border-bottom: 1px solid var(--adres-border);
+  padding: 1.1rem 2rem;
   display: flex;
   justify-content: center;
-  gap: 3rem;
+  gap: 2.5rem;
   flex-wrap: wrap;
 }
-
-.stat-item {
-  text-align: center;
-}
-
+.stat-item { text-align: center; }
 .stat-item__number {
-  font-size: 1.8rem;
-  font-weight: 800;
-  color: var(--adres-green);
+  font-size: 1.9rem;
+  font-weight: 900;
+  color: var(--adres-navy);
   line-height: 1;
 }
-
 .stat-item__label {
-  font-size: 0.8rem;
-  color: #666;
+  font-size: 0.75rem;
+  color: var(--adres-text-muted);
   text-transform: uppercase;
   letter-spacing: 0.5px;
+  margin-top: 3px;
 }
 
-/* Flujo de proceso */
+/* ── Flujo ───────────────────────────────────────────────── */
 .flujo-section {
   padding: 3rem 2rem;
-  background: white;
+  background: var(--adres-gray);
 }
-
 .flujo-section__title {
   text-align: center;
-  font-size: 1.8rem;
+  font-size: 1.7rem;
   font-weight: 700;
-  color: var(--adres-blue);
+  color: var(--adres-navy);
   margin-bottom: 2rem;
 }
-
 .flujo-steps {
   display: flex;
   align-items: center;
@@ -176,56 +266,34 @@
   max-width: 1000px;
   margin: 0 auto;
 }
-
 .flujo-step {
-  background: var(--adres-light-green);
-  border: 2px solid var(--adres-green);
-  border-radius: 8px;
-  padding: 1rem 1.5rem;
+  background: white;
+  border: 2px solid var(--adres-navy);
+  border-top: 4px solid var(--adres-green);
+  border-radius: 6px;
+  padding: 1rem 1.25rem;
   text-align: center;
-  min-width: 140px;
+  min-width: 135px;
   flex: 1;
+  box-shadow: 0 2px 8px rgba(0,51,102,0.08);
 }
+.flujo-step__number { font-size: 0.72rem; color: var(--adres-green); font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px; }
+.flujo-step__name   { font-size: 0.95rem; font-weight: 700; color: var(--adres-navy); margin: 0.2rem 0; }
+.flujo-step__desc   { font-size: 0.75rem; color: #555; }
+.flujo-arrow        { color: var(--adres-navy); font-size: 1.4rem; font-weight: bold; opacity: 0.5; }
 
-.flujo-step__number {
-  font-size: 0.75rem;
-  color: var(--adres-green);
-  font-weight: 700;
-  text-transform: uppercase;
-}
-
-.flujo-step__name {
-  font-size: 1rem;
-  font-weight: 700;
-  color: var(--adres-blue);
-  margin: 0.25rem 0;
-}
-
-.flujo-step__desc {
-  font-size: 0.78rem;
-  color: #555;
-}
-
-.flujo-arrow {
-  color: var(--adres-green);
-  font-size: 1.5rem;
-  font-weight: bold;
-}
-
-/* Módulos grid */
+/* ── Módulos grid ────────────────────────────────────────── */
 .modulos-section {
   padding: 3rem 2rem;
-  background: var(--adres-light-blue);
+  background: var(--adres-navy-light);
 }
-
 .modulos-section__title {
   text-align: center;
-  font-size: 1.8rem;
+  font-size: 1.7rem;
   font-weight: 700;
-  color: var(--adres-blue);
+  color: var(--adres-navy);
   margin-bottom: 2rem;
 }
-
 .modulos-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
@@ -233,107 +301,96 @@
   max-width: 1100px;
   margin: 0 auto;
 }
-
 .modulo-card {
   background: white;
-  border-radius: 8px;
+  border-radius: 6px;
   padding: 1.25rem;
-  border-left: 4px solid var(--adres-green);
-  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+  border-left: 4px solid var(--adres-blue);
+  box-shadow: 0 2px 8px rgba(0,51,102,0.08);
   text-decoration: none;
   color: inherit;
-  transition: transform 0.2s, box-shadow 0.2s;
+  transition: transform 0.2s, box-shadow 0.2s, border-color 0.2s;
   display: block;
 }
-
 .modulo-card:hover {
   transform: translateY(-3px);
-  box-shadow: 0 6px 16px rgba(0,0,0,0.12);
+  box-shadow: 0 6px 20px rgba(0,51,102,0.14);
+  border-color: var(--adres-green);
   text-decoration: none;
   color: inherit;
 }
-
-.modulo-card__icon {
-  font-size: 1.8rem;
-  margin-bottom: 0.5rem;
-}
-
-.modulo-card__title {
-  font-size: 1rem;
-  font-weight: 700;
-  color: var(--adres-blue);
-  margin: 0 0 0.25rem 0;
-}
-
-.modulo-card__hus {
-  font-size: 0.8rem;
-  color: var(--adres-green);
-  font-weight: 600;
-}
-
-.modulo-card__desc {
-  font-size: 0.82rem;
-  color: #555;
-  margin-top: 0.4rem;
-}
-
+.modulo-card__icon  { font-size: 1.8rem; margin-bottom: 0.4rem; }
+.modulo-card__title { font-size: 1rem; font-weight: 700; color: var(--adres-navy); margin: 0 0 0.2rem; }
+.modulo-card__hus   { font-size: 0.78rem; color: var(--adres-blue); font-weight: 600; }
+.modulo-card__desc  { font-size: 0.8rem; color: #555; margin-top: 0.35rem; line-height: 1.4; }
 .modulo-card__badge {
   display: inline-block;
   padding: 0.15rem 0.5rem;
   border-radius: 12px;
-  font-size: 0.7rem;
+  font-size: 0.68rem;
   font-weight: 600;
   margin-top: 0.5rem;
 }
-
 .badge-critico { background: #fde8e8; color: #c0392b; }
 .badge-alto    { background: #fef3cd; color: #856404; }
-.badge-medio   { background: #e8f4f8; color: #1a6b8a; }
-.badge-bajo    { background: #e8f5ee; color: #00843D; }
+.badge-medio   { background: #e8f0fb; color: #0052a3; }
+.badge-bajo    { background: var(--adres-green-light); color: var(--adres-green-dark); }
 
-/* Actores section */
+/* ── Actores ─────────────────────────────────────────────── */
 .actores-section {
   padding: 3rem 2rem;
   background: white;
 }
-
 .actores-section__title {
   text-align: center;
-  font-size: 1.8rem;
+  font-size: 1.7rem;
   font-weight: 700;
-  color: var(--adres-blue);
+  color: var(--adres-navy);
   margin-bottom: 2rem;
 }
-
 .actores-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 1.5rem;
+  gap: 1.25rem;
   max-width: 900px;
   margin: 0 auto;
 }
-
 .actor-card {
   text-align: center;
   padding: 1.5rem;
-  border-radius: 8px;
-  background: var(--adres-light-green);
-  border: 1px solid #c3e6cb;
+  border-radius: 6px;
+  background: var(--adres-navy-light);
+  border: 1px solid #c5d5e8;
+  border-top: 3px solid var(--adres-navy);
 }
+.actor-card__icon  { font-size: 2.5rem; margin-bottom: 0.4rem; }
+.actor-card__name  { font-weight: 700; color: var(--adres-navy); font-size: 1rem; }
+.actor-card__role  { font-size: 0.8rem; color: #555; margin-top: 0.25rem; line-height: 1.4; }
 
-.actor-card__icon { font-size: 2.5rem; margin-bottom: 0.5rem; }
-.actor-card__name { font-weight: 700; color: var(--adres-blue); font-size: 1rem; }
-.actor-card__role { font-size: 0.82rem; color: #555; margin-top: 0.25rem; }
-
-/* Footer */
+/* ── Footer ──────────────────────────────────────────────── */
 .footer {
-  background-color: var(--adres-blue) !important;
-  border-top: 3px solid var(--adres-green);
+  background-color: var(--adres-navy) !important;
+  border-top: 4px solid var(--adres-green);
 }
+.footer__title { color: #fff !important; font-size: 0.9rem !important; }
+.footer__link-item { color: rgba(255,255,255,0.75) !important; }
+.footer__link-item:hover { color: #fff !important; }
+.footer__copyright { color: rgba(255,255,255,0.55) !important; font-size: 0.8rem; }
 
-/* Docusaurus overrides */
+/* ── Docs / sidebar ──────────────────────────────────────── */
+.menu__link--active {
+  color: var(--adres-blue) !important;
+  border-left: 3px solid var(--adres-green);
+}
+.table-of-contents__link--active { color: var(--adres-blue); }
+
+/* ── Admonitions (callouts en docs) ─────────────────────── */
+.alert--info    { --ifm-alert-border-color: var(--adres-blue); }
+.alert--success { --ifm-alert-border-color: var(--adres-green); }
+
+/* ── Code blocks ─────────────────────────────────────────── */
 .docusaurus-highlight-code-line {
-  background-color: rgba(0, 132, 61, 0.1);
+  background-color: rgba(0,102,204,0.08);
   display: block;
   margin: 0 calc(-1 * var(--ifm-pre-padding));
   padding: 0 var(--ifm-pre-padding);

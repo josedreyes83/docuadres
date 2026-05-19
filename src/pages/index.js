@@ -1,6 +1,29 @@
 import React from 'react';
 import Link from '@docusaurus/Link';
 import Layout from '@theme/Layout';
+import useBaseUrl from '@docusaurus/useBaseUrl';
+
+function GovCoStrip() {
+  return (
+    <div className="govco-strip">
+      <div className="govco-strip__left">
+        <div className="govco-strip__flag">
+          <span style={{background:'#FCD116'}}/>
+          <span style={{background:'#003893'}}/>
+          <span style={{background:'#CE1126'}}/>
+        </div>
+        <span>República de Colombia</span>
+        <span style={{opacity:0.4}}>|</span>
+        <span>Ministerio de Salud y Protección Social</span>
+      </div>
+      <div className="govco-strip__right">
+        <a href="https://www.adres.gov.co" target="_blank" rel="noopener noreferrer">adres.gov.co</a>
+        <span style={{opacity:0.4}}>|</span>
+        <a href="https://www.gov.co" target="_blank" rel="noopener noreferrer">gov.co</a>
+      </div>
+    </div>
+  );
+}
 
 const MODULOS = [
   { icon: '⚙️', title: 'Alistamiento', hus: '109 HUs', desc: 'Datos maestros: EPS, Condiciones, Giro Límite, REPS, ERPF', riesgo: 'medio', link: '/docs/modulos/alistamiento' },
@@ -24,12 +47,24 @@ const ACTORES = [
 const RIESGO_LABEL = { critico: 'Crítico', alto: 'Alto', medio: 'Medio', bajo: 'Bajo' };
 
 export default function Home() {
+  const logoAdres = useBaseUrl('/img/logo-adres-oficial.png');
   return (
     <Layout title="Inicio" description="Sistema GiroDirecto ADRES — Pago directo a prestadores de salud">
 
+      <GovCoStrip />
+
       {/* HERO */}
       <div className="hero-adres">
-        <div className="hero-adres__title">🔷 GiroDirecto</div>
+        <div className="hero-adres__logos">
+          <img src={logoAdres} alt="ADRES" />
+          <div className="sep" />
+          <div style={{color:'rgba(255,255,255,0.9)', fontWeight:700, fontSize:'1.05rem', lineHeight:1.3, textAlign:'left'}}>
+            <div>GiroDirecto</div>
+            <div style={{fontWeight:400, fontSize:'0.78rem', opacity:0.8}}>Sistema de Pago Directo</div>
+          </div>
+        </div>
+        <div className="hero-adres__tag">Sistema de información SGSSS</div>
+        <div className="hero-adres__title">Pago Directo a Prestadores de Salud</div>
         <div className="hero-adres__subtitle">
           Sistema de pago directo de <strong>ADRES</strong> a prestadores de salud (IPS),
           garantizando la continuidad de los servicios cuando las EPS no pueden pagar.

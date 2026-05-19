@@ -35,8 +35,8 @@ const config = {
       navbar: {
         title: 'GiroDirecto',
         logo: {
-          alt: 'ADRES',
-          src: 'img/logo-adres.svg',
+          alt: 'ADRES — Administradora de los Recursos del SGSSS',
+          src: 'img/logo-adres-oficial.png',
         },
         items: [
           { to: '/', label: 'Inicio', position: 'left', activeBaseRegex: '^/$' },
