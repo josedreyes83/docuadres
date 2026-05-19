@@ -13,8 +13,6 @@ function GovCoStrip() {
           <span style={{background:'#CE1126'}}/>
         </div>
         <span>República de Colombia</span>
-        <span style={{opacity:0.4}}>|</span>
-        <span>Ministerio de Salud y Protección Social</span>
       </div>
       <div className="govco-strip__right">
         <a href="https://www.adres.gov.co" target="_blank" rel="noopener noreferrer">adres.gov.co</a>
