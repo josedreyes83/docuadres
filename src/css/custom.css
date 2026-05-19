@@ -1,0 +1,340 @@
+/* Colores institucionales ADRES — GiroDirecto */
+:root {
+  --ifm-color-primary: #00843D;
+  --ifm-color-primary-dark: #007236;
+  --ifm-color-primary-darker: #006B32;
+  --ifm-color-primary-darkest: #005829;
+  --ifm-color-primary-light: #009647;
+  --ifm-color-primary-lighter: #009D4B;
+  --ifm-color-primary-lightest: #00B055;
+  --ifm-code-font-size: 95%;
+  --ifm-navbar-background-color: #003366;
+  --ifm-navbar-link-color: #ffffff;
+  --ifm-navbar-link-hover-color: #a8d5b5;
+  --ifm-navbar-shadow: 0 2px 8px rgba(0,0,0,0.3);
+  --adres-green: #00843D;
+  --adres-blue: #003366;
+  --adres-light-green: #e8f5ee;
+  --adres-light-blue: #e8eef5;
+}
+
+[data-theme='dark'] {
+  --ifm-color-primary: #4CAF50;
+  --ifm-color-primary-dark: #43A047;
+  --ifm-color-primary-darker: #388E3C;
+  --ifm-color-primary-darkest: #2E7D32;
+  --ifm-color-primary-light: #66BB6A;
+  --ifm-color-primary-lighter: #81C784;
+  --ifm-color-primary-lightest: #A5D6A7;
+}
+
+/* Navbar institucional */
+.navbar {
+  background-color: var(--adres-blue) !important;
+  border-bottom: 3px solid var(--adres-green);
+}
+
+.navbar__title {
+  color: #ffffff;
+  font-weight: 700;
+  font-size: 1.2rem;
+}
+
+.navbar__link {
+  color: #ffffff !important;
+  font-weight: 500;
+}
+
+.navbar__link:hover,
+.navbar__link--active {
+  color: #a8d5b5 !important;
+}
+
+/* Hero section */
+.hero-adres {
+  background: linear-gradient(135deg, var(--adres-blue) 0%, #004080 50%, var(--adres-green) 100%);
+  padding: 4rem 2rem;
+  text-align: center;
+  color: white;
+}
+
+.hero-adres__title {
+  font-size: 2.8rem;
+  font-weight: 800;
+  margin-bottom: 0.5rem;
+  text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+}
+
+.hero-adres__subtitle {
+  font-size: 1.2rem;
+  opacity: 0.9;
+  max-width: 700px;
+  margin: 0 auto 2rem auto;
+}
+
+.hero-adres__badge {
+  display: inline-block;
+  background: rgba(255,255,255,0.15);
+  border: 1px solid rgba(255,255,255,0.3);
+  padding: 0.3rem 0.8rem;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  margin: 0.25rem;
+}
+
+.hero-adres__cta {
+  margin-top: 2rem;
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.btn-primary-adres {
+  background-color: var(--adres-green);
+  color: white;
+  padding: 0.75rem 2rem;
+  border-radius: 6px;
+  font-weight: 600;
+  text-decoration: none;
+  border: 2px solid var(--adres-green);
+  transition: all 0.2s;
+}
+
+.btn-primary-adres:hover {
+  background-color: #006B32;
+  color: white;
+  text-decoration: none;
+}
+
+.btn-outline-adres {
+  background-color: transparent;
+  color: white;
+  padding: 0.75rem 2rem;
+  border-radius: 6px;
+  font-weight: 600;
+  text-decoration: none;
+  border: 2px solid rgba(255,255,255,0.6);
+  transition: all 0.2s;
+}
+
+.btn-outline-adres:hover {
+  background-color: rgba(255,255,255,0.1);
+  color: white;
+  text-decoration: none;
+}
+
+/* Stats bar */
+.stats-bar {
+  background: #f8f9fa;
+  border-bottom: 1px solid #dee2e6;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: center;
+  gap: 3rem;
+  flex-wrap: wrap;
+}
+
+.stat-item {
+  text-align: center;
+}
+
+.stat-item__number {
+  font-size: 1.8rem;
+  font-weight: 800;
+  color: var(--adres-green);
+  line-height: 1;
+}
+
+.stat-item__label {
+  font-size: 0.8rem;
+  color: #666;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+/* Flujo de proceso */
+.flujo-section {
+  padding: 3rem 2rem;
+  background: white;
+}
+
+.flujo-section__title {
+  text-align: center;
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: var(--adres-blue);
+  margin-bottom: 2rem;
+}
+
+.flujo-steps {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.flujo-step {
+  background: var(--adres-light-green);
+  border: 2px solid var(--adres-green);
+  border-radius: 8px;
+  padding: 1rem 1.5rem;
+  text-align: center;
+  min-width: 140px;
+  flex: 1;
+}
+
+.flujo-step__number {
+  font-size: 0.75rem;
+  color: var(--adres-green);
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.flujo-step__name {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--adres-blue);
+  margin: 0.25rem 0;
+}
+
+.flujo-step__desc {
+  font-size: 0.78rem;
+  color: #555;
+}
+
+.flujo-arrow {
+  color: var(--adres-green);
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+/* Módulos grid */
+.modulos-section {
+  padding: 3rem 2rem;
+  background: var(--adres-light-blue);
+}
+
+.modulos-section__title {
+  text-align: center;
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: var(--adres-blue);
+  margin-bottom: 2rem;
+}
+
+.modulos-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1rem;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.modulo-card {
+  background: white;
+  border-radius: 8px;
+  padding: 1.25rem;
+  border-left: 4px solid var(--adres-green);
+  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+  text-decoration: none;
+  color: inherit;
+  transition: transform 0.2s, box-shadow 0.2s;
+  display: block;
+}
+
+.modulo-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 16px rgba(0,0,0,0.12);
+  text-decoration: none;
+  color: inherit;
+}
+
+.modulo-card__icon {
+  font-size: 1.8rem;
+  margin-bottom: 0.5rem;
+}
+
+.modulo-card__title {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--adres-blue);
+  margin: 0 0 0.25rem 0;
+}
+
+.modulo-card__hus {
+  font-size: 0.8rem;
+  color: var(--adres-green);
+  font-weight: 600;
+}
+
+.modulo-card__desc {
+  font-size: 0.82rem;
+  color: #555;
+  margin-top: 0.4rem;
+}
+
+.modulo-card__badge {
+  display: inline-block;
+  padding: 0.15rem 0.5rem;
+  border-radius: 12px;
+  font-size: 0.7rem;
+  font-weight: 600;
+  margin-top: 0.5rem;
+}
+
+.badge-critico { background: #fde8e8; color: #c0392b; }
+.badge-alto    { background: #fef3cd; color: #856404; }
+.badge-medio   { background: #e8f4f8; color: #1a6b8a; }
+.badge-bajo    { background: #e8f5ee; color: #00843D; }
+
+/* Actores section */
+.actores-section {
+  padding: 3rem 2rem;
+  background: white;
+}
+
+.actores-section__title {
+  text-align: center;
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: var(--adres-blue);
+  margin-bottom: 2rem;
+}
+
+.actores-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.5rem;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.actor-card {
+  text-align: center;
+  padding: 1.5rem;
+  border-radius: 8px;
+  background: var(--adres-light-green);
+  border: 1px solid #c3e6cb;
+}
+
+.actor-card__icon { font-size: 2.5rem; margin-bottom: 0.5rem; }
+.actor-card__name { font-weight: 700; color: var(--adres-blue); font-size: 1rem; }
+.actor-card__role { font-size: 0.82rem; color: #555; margin-top: 0.25rem; }
+
+/* Footer */
+.footer {
+  background-color: var(--adres-blue) !important;
+  border-top: 3px solid var(--adres-green);
+}
+
+/* Docusaurus overrides */
+.docusaurus-highlight-code-line {
+  background-color: rgba(0, 132, 61, 0.1);
+  display: block;
+  margin: 0 calc(-1 * var(--ifm-pre-padding));
+  padding: 0 var(--ifm-pre-padding);
+}
