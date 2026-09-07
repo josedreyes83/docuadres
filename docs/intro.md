@@ -43,7 +43,7 @@ MinSalud (SFTP) ──► Alistamiento ──► Pre-Liquidación ──► Vali
 
 ## Navegación rápida
 
-- 📋 [Módulos del sistema](/docs/modulos/index) — todos los módulos con sus HUs y estado
+- 📋 [Módulos del sistema](/docs/modulos) — todos los módulos con sus HUs y estado
 - 🔄 [Flujo del proceso](/docs/arquitectura/flujo) — diagrama completo de las 5 etapas
 - 🛠️ [Stack tecnológico](/docs/arquitectura/stack) — Angular, .NET Core 6, Azure
 - 🔗 [Integraciones](/docs/arquitectura/integraciones) — SIIFA, REPS, ERP, ORFEO, MIPRES

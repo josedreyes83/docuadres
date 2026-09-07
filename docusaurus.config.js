@@ -64,13 +64,7 @@ const config = {
             position: 'left',
             label: 'Normativa',
           },
-          {
-            type: 'docSidebar',
-            sidebarId: 'guiasSidebar',
-            position: 'left',
-            label: 'Guías Dev',
-          },
-          { to: '/docs/glosario', label: 'Glosario', position: 'left' },
+{ to: '/docs/glosario', label: 'Glosario', position: 'left' },
           {
             href: 'https://www.adres.gov.co',
             label: 'ADRES.gov.co',
